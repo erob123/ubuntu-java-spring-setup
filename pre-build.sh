@@ -1,5 +1,7 @@
 #!/bin/bash
 #instructions are for ubuntu 18.04
+##CAUTION: this file is for a clean install of Ubuntu.  If you have messed with your environment, 
+#run everything with sudo apt remove [apps], then sudo apt autoremove, then run this script
 
 #install jre
 sudo apt install default-jre
