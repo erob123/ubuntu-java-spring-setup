@@ -9,8 +9,13 @@ sudo apt install default-jre
 #install maven
 sudo apt install maven
 
+#****Install your IDE
 #install eclipse
-sudo snap install --classic eclipse
+#sudo snap install --classic eclipse
+
+#install intellij IDEA
+sudo snap install intellij-idea-ultimate --classic
+#*******
 
 #install spring tool suite 3 in eclipse marketplace
 
