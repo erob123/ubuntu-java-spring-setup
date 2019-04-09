@@ -3,6 +3,13 @@
 ##CAUTION: this file is for a clean install of Ubuntu.  If you have messed with your environment, 
 #run everything with sudo apt remove [apps], then sudo apt autoremove, then run this script
 
+#update apt
+sudo apt-get update
+sudo apt-get upgrade
+
+#install git
+sudo apt-get install git
+
 #install jre
 sudo apt install default-jre
 
