@@ -33,12 +33,12 @@ sudo apt install ecj
 sudo apt install openjdk-8-jdk-headless
 #*****
 
-#******install javadoc for openjdk (will be slightly different for Sun JDK)
-sudo apt-get install openjdk-11-source
+#******install javadoc for openjdk, for eclipse only (will be slightly different for Sun JDK)
+#sudo apt-get install openjdk-11-source
 
 #this will show the location of your javadoc src archive
-sudo apt-get install dpkg
-dpkg -L openjdk-11-source | grep '.zip'
+#sudo apt-get install dpkg
+#dpkg -L openjdk-11-source | grep '.zip'
 
 #open eclipse, navigate to window>preferences>java>installed JREs>select current one
 #edit>source attachment put the printout from the previous command here
