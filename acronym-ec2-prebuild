@@ -3,6 +3,8 @@
 ##CAUTION: this file is for a clean install of Ubuntu.  If you have messed with your environment, 
 #run everything with sudo apt remove [apps], then sudo apt autoremove, then run this script
 
+#NOTE: Make sure thate your AWS security group allows inbound TCP traffic on ports 8080 and 80, and SSH on 22
+
 #update apt
 sudo apt-get update
 sudo apt-get upgrade
@@ -22,3 +24,15 @@ sudo apt install openjdk-11-jdk-headless
 sudo apt install ecj                    
 sudo apt install openjdk-8-jdk-headless
 #*****
+
+#clone the acronym repository
+git clone https://github.com/tenfromfive/acronym-web-app.git
+
+#change into the root directory for the acronym-web-app
+cd acronym-web-app
+
+#forward port 8080 to port 80 for HTTP
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+
+#start the application
+mvn spring-boot:run
