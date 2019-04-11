@@ -31,7 +31,7 @@ git clone https://github.com/tenfromfive/acronym-web-app.git
 #change into the root directory for the acronym-web-app
 cd acronym-web-app
 
-#forward port 8080 to port 80 for HTTP
+#forward port 8080 to port 80 for HTTP (port 80 is blocked on non-route access)
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
 
 #start the application
